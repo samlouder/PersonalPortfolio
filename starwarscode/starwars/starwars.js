@@ -1,13 +1,11 @@
 import { films } from "../data/films.js"
 import { people } from  "../data/people.js"
 
-let greetingDiv = document.querrySelector('.greeting')
+let gallery = document.querrySelector('.gallery')
 
 const maleCharacters = people.filter(person => person.gender === 'male')
-console.log(maleCharacters)
 
 const femaleCharacters = people.filter(person => person.gender === 'female')
-console.log(femaleCharacters)
 
 const otherCharacters = people.filter(
     person =>
@@ -25,15 +23,37 @@ maleButton.addEventListener('click', function(event) {
     populationDOM(maleCharacters)
 })
 
-let counter = 1
+femaleButton.addEventListener('click', function(event) {
+    populationDOM(femaleButton)
+})
+
+otherButton.addEventListener('click', function(event) {
+    populationDOM(otherButton)
+})
+
+function getLastNumber(url) {
+    let end = url.lastIndexOf('/')
+    let start = end -2
+    if(url.charAt(start) === '/'){
+        start++
+    }
+    return url.slice(start, end)
+}
+
+function removeChildren(element) {
+    while (element.firstChild) {
+        element.removeChild(element.firstChild)
+    }
+}
 
 function populationDOM(characters) {
+    removeChildren(gallery)
     characters.forEach(person => {
-        console.log(`${person.url}`)
+        let imageNum =  getLastNumber(person.url)
         let personAnchor = document.createElement('a')
         personAnchor.href = '#'
         let personImg = document.createElement('img')
-        personImg.src = `https://starwars-visualguide.com/assests/img/characters/${counter}.jpg`
+        personImg.src = `https://starwars-visualguide.com/assests/img/characters/${imageNum}.jpg`
         
         personImg.addEventListener('error', event => {
             personImg.hidden = true
@@ -45,7 +65,10 @@ function populationDOM(characters) {
         })
 
         personAnchor.appendChild(personImg)
-        greetingDiv.appendChild(personAnchor)
+        gallery.appendChild(personAnchor)
         counter++
     })
 }
+
+
+populateDOM(people)
