@@ -1,6 +1,6 @@
 import { films } from "../data/films.js"
 import { people } from  "../data/people.js"
-
+import {removeChildren} from "../utils.js"
 let gallery = document.querrySelector('.gallery')
 
 const maleCharacters = people.filter(person => person.gender === 'male')
