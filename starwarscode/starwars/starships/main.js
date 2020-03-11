@@ -3,7 +3,7 @@ import { removeChildren, getLastNumber } from '../utils.js'
 
 const nav = document.querySelector('.nav')
 
-const navList = document.querySelector('.navList')
+const navList = document.querySelector(.'navList')
 
 const shipView = document.querySelector('#main')
 
@@ -13,16 +13,16 @@ function populateNav(starships) {
         shipAnchor.href = '#'
         let listItem = document.createElement('li')
         listItem.textContent = starship.name
-
+        
         shipAnchor.addEventListener('click', event => {
-            // store the name of the list items clicked on 
+            //store the name of the list item clicked on 
             let shipName = event.target.textContent
-            const foundShip = starships.find(ship => ship.name === shipName )
+            const foundShip = starships.find(ship => ship.name ===shipName )
             console.log(foundShip)
-            populateSHipView(foundShip)
+            populateShipView(foundShip)
         })
 
-        shipAnchor.appendChild(listItem)
+        shipAnchor.appendChild(listItems)
         navList.appendChild(shipAnchor)
 
     })
@@ -33,8 +33,8 @@ function populateShipView(shipData) {
     removeChildren(shipView)
     let imageNum = getLastNumber(shipData.url)
     let shipImage = document.createElement('img')
-    shipImage.src = `https://starwars-visualguide.com/assets.img.starships/${imageNum}.jpg`
-    shipView.appendChild(shipImage)   
+    shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${imageNum}.jpg`
+    shipView.appendChild(shipImage)
 }
 
 populateNav(starships)
