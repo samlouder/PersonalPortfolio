@@ -1,9 +1,9 @@
 import { starships } from '../data/starships.js'
-import { removeChildren, getLastNumber } from '../utils.js'
+import { removeChildren, getLastNumber } from '../utils.js/index.js'
 
 const nav = document.querySelector('.nav')
 
-const navList = document.querySelector(.'navList')
+const navList = document.querySelector('.navList')
 
 const shipView = document.querySelector('#main')
 
