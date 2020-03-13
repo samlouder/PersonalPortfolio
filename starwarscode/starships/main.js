@@ -5,12 +5,12 @@ const nav = document.querySelector('.nav')
 
 const navList = document.querySelector('.navList')
 
-const shipView = docuemnt.querySelector('#main')
+const shipView = document.getElementById('main')
 
 const modalDialog = document.querySelector('.modal')
 const modalButton = document.querySelector('.modal-close')
 const modalBackground = document.querySelector('.modal-background')
-const modalMessage = docuemnt.querySelector('.dialogMessage')
+const modalMessage = document.querySelector('.dialogMessage')
 
 modalButton.addEventListener('click', () => {
     modalDialog.classList.toggle("is-active")
@@ -46,7 +46,7 @@ function populateShipView(shipData) {
     removeChildren(shipView)
     let imageNum = getLastNumber(shipData.url)
     let shipImage = document.createElement('img')
-    shipImage.src = `https://starwars-visualguide.com/assets/img/starships${imageNum}.jpg`
+    shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${imageNum}.jpg`
 
     shipImage.addEventListener('error', event => {
         shipImage.hidden = true

@@ -12,7 +12,19 @@ button {
     height: 3rem;
     border-radius: 10px;
     font-size: larger;
-    background-color: thistle;
+    background-color:black;
     color: lightgrey;
     font-weight: 600;
+}
+.test {
+    width: 200px;
+    height: 200px;
+    margin: 5p;
+    /* background-color: lightsalmon; */
+    padding: 2px;
+}
+#gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }

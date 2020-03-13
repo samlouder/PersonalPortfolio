@@ -1,8 +1,11 @@
 import { films } from "../data/films.js"
 import { people } from  "../data/people.js"
 import {removeChildren} from "../utils.js"
-let gallery = document.querrySelector('.gallery')
+//let gallery = document.querrySelector('.gallery')
+const gallery = document.getElementById("gallery")
 
+console.log(gallery)
+// console.log(people)
 const maleCharacters = people.filter(person => person.gender === 'male')
 
 const femaleCharacters = people.filter(person => person.gender === 'female')
@@ -13,22 +16,22 @@ const otherCharacters = people.filter(
     person.gender ==='none' ||
     person.gender ==='hermaphrodite',
 )
-console.log(otherCharacters)
+console.log(otherCharacters, femaleCharacters)
 
-let maleButton = document.querrySelector('#maleButton')
-let femaleButton = document.querrySelector('#femaleButton')
-let otherButton = document.querrySelector('#otherButton')
+let maleButton = document.getElementById("maleButton")
+let femaleButton = document.getElementById('femaleButton')
+let otherButton = document.getElementById('otherButton')
 
 maleButton.addEventListener('click', function(event) {
-    populationDOM(maleCharacters)
+    populateDOM(maleCharacters)
 })
 
 femaleButton.addEventListener('click', function(event) {
-    populationDOM(femaleButton)
+    populateDOM(femaleCharacters)
 })
 
 otherButton.addEventListener('click', function(event) {
-    populationDOM(otherButton)
+    populateDOM(otherCharacters)
 })
 
 function getLastNumber(url) {
@@ -40,21 +43,27 @@ function getLastNumber(url) {
     return url.slice(start, end)
 }
 
-function removeChildren(element) {
-    while (element.firstChild) {
-        element.removeChild(element.firstChild)
-    }
-}
+// function removeChildren(element) {
+//     while (element.firstChild) {
+//         element.removeChild(element.firstChild)
+//     }
+// }
+console.log(people[0].name)
 
-function populationDOM(characters) {
+function populateDOM(characters) {
     removeChildren(gallery)
+    let counter = 0
     characters.forEach(person => {
-        let imageNum =  getLastNumber(person.url)
+        let imageNum = getLastNumber(person.url)
         let personAnchor = document.createElement('a')
+        let name = document.createElement('p')
+        name.innerText = characters[counter].name
+        personAnchor.className = "test"
         personAnchor.href = '#'
         let personImg = document.createElement('img')
-        personImg.src = `https://starwars-visualguide.com/assests/img/characters/${imageNum}.jpg`
-        
+        personImg.src = `https://starwars-visualguide.com/assets/img/characters/${imageNum}.jpg`
+        //personImg.src = `https://starwars-visualguide.com/#/characters/${imageNum}.jpg`
+
         personImg.addEventListener('error', event => {
             personImg.hidden = true
             //personImg.src = '../images/uvu.jpeg'
@@ -63,12 +72,13 @@ function populationDOM(characters) {
         personImg.addEventListener('click',function(event) {
             console.log('Thanks for clicking!')
         })
-
+        
         personAnchor.appendChild(personImg)
+        personAnchor.appendChild(name)
         gallery.appendChild(personAnchor)
         counter++
     })
 }
 
 
-populateDOM(people)
+//populateDOM(people)
