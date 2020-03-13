@@ -1,18 +1,23 @@
 import { starships } from '../data/starships.js'
-import { removeChildren, getLastNumber } from '../utils.js/index.js'
+import { removeChildren, getLastNumber } from '../utils.js'
 
 const nav = document.querySelector('.nav')
 
 const navList = document.querySelector('.navList')
 
-const shipView = document.querySelector('#main')
+const shipView = docuemnt.querySelector('#main')
 
 const modalDialog = document.querySelector('.modal')
 const modalButton = document.querySelector('.modal-close')
-const modalBackground = doucment.querySelector('.modal-background')
+const modalBackground = document.querySelector('.modal-background')
+const modalMessage = docuemnt.querySelector('.dialogMessage')
 
-modalButton.addEventListener = ('click', () => {
-    modalDialog
+modalButton.addEventListener('click', () => {
+    modalDialog.classList.toggle("is-active")
+})
+
+modalBackground.addEventListener('click', () => {
+    modalDialog.classList.toggle("is-active")
 })
 
 function populateNav(starships) {
@@ -21,16 +26,16 @@ function populateNav(starships) {
         shipAnchor.href = '#'
         let listItem = document.createElement('li')
         listItem.textContent = starship.name
-        
+
         shipAnchor.addEventListener('click', event => {
-            //store the name of the list item clicked on 
+            // store the name of the list item clicked on 
             let shipName = event.target.textContent
-            const foundShip = starships.find(ship => ship.name ===shipName )
+            const foundShip = starships.find(ship => ship.name === shipName )
             console.log(foundShip)
             populateShipView(foundShip)
         })
 
-        shipAnchor.appendChild(listItems)
+        shipAnchor.appendChild(listItem)
         navList.appendChild(shipAnchor)
 
     })
@@ -41,14 +46,15 @@ function populateShipView(shipData) {
     removeChildren(shipView)
     let imageNum = getLastNumber(shipData.url)
     let shipImage = document.createElement('img')
-    shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${imageNum}.jpg`
+    shipImage.src = `https://starwars-visualguide.com/assets/img/starships${imageNum}.jpg`
 
-    shipImage.addEventListener('error' , event => {
+    shipImage.addEventListener('error', event => {
         shipImage.hidden = true
-        modalDialog.classList.toggle('is-active')
+        modalDialog.classList.toggle("is-active")
+        modalMessage.textContent = `sorry, could not find an image for ${shipData.name}.`
     })
 
     shipView.appendChild(shipImage)
-}
+ }
 
-populateNav(starships)
+ populateNav(starships)

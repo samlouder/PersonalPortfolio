@@ -4,8 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, inital-scale=1.0" />
         <title>StarShips</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" 
+        />
+        <script 
+        defer 
+        src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+        ></script>
         <link href="style.css" rel="stylesheet" />
     </head>
     <body>
@@ -13,21 +19,23 @@
             <h1>The Starships of Star Wars</h1>
         </header>
         <!-- Brought in the modal from Bulma-->
-        <div class="modal is-active">
+        <div class="modal">
             <div class="modal-background"></div>
             <div class="modal-content">
-              <!-- Any other Bulma elements you want -->
+                <div class="card">
+                    <div class="card-content">
+                        <h2 class="dialogmessage is-size-2"></h2>
+                    </div>
+                </div>
             </div>
             <button class="modal-close is-large" aria-label="close"></button>
-          </div>
+            </div>
           <!-- End Modal code, begin my layout-->
         <div class="container">
             <nav class="nav">
                 <ul class="navList"></ul>
             </nav>
-            <main id="main">
-
-            </main>
+            <main id="main"></main>
         </div>
 <footer class="is-size-3">
     <p>&copy; Sam Louder Desings 2020</p>
