@@ -1,11 +1,11 @@
 import { starships } from '../data/starships.js'
-import { removeChildren, getLastNumber } from '../utils.js'
+import { removeChildren, getLastNumber, addStarField } from '../utils.js'
 
 const nav = document.querySelector('.nav')
 
 const navList = document.querySelector('.navList')
 
-const shipView = document.getElementById('main')
+const shipView = document.getElementById('.shipView')
 
 const modalDialog = document.querySelector('.modal')
 const modalButton = document.querySelector('.modal-close')
@@ -58,3 +58,5 @@ function populateShipView(shipData) {
  }
 
  populateNav(starships)
+
+ addStarField(document.body, )
