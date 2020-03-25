@@ -1,6 +1,6 @@
 import { films } from "../data/films.js"
 import { people } from  "../data/people.js"
-import {removeChildren} from "../utils.js"
+import {removeChildren, addStarField} from "../utils.js"
 //let gallery = document.querrySelector('.gallery')
 const gallery = document.getElementById("gallery")
 
@@ -80,5 +80,5 @@ function populateDOM(characters) {
     })
 }
 
-
+addStarField(document.body, 500)
 //populateDOM(people)
