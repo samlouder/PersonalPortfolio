@@ -1,27 +1,30 @@
 :root {
     box-sizing: border-box;
-    background-color: #dfdfdf;
 }
 
 a > img {
-    height: 18rem;
-    margin: 4px;
+    height: 20rem;
+    margin: 2px;
+    padding: 20px;
 }
 
 button {
     height: 3rem;
     border-radius: 10px;
-    font-size: larger;
-    background-color:black;
-    color: lightgrey;
+    font-size: 35px;
+    background-color: darkslategrey;
+    color: yellow;
     font-weight: 600;
+    align-items: center;
+    justify-content: space-between;
+
 }
 .test {
-    width: 200px;
+    /*width: 200px;
     height: 200px;
     margin: 5p;
     /* background-color: lightsalmon; */
-    padding: 2px;
+   /* padding: 2px;*/
 }
 #gallery {
     display: flex;
@@ -36,10 +39,6 @@ h1 {
     font-weight: bolder;
     font-size: 4em;
     text-align: center;
-}
-
-button {
-    align-items: center;
 }
 
 li {
