@@ -8,19 +8,20 @@ const filterSenators = (prop, value) => {
     return senators.filter(senator => senator[prop] === value)
 }
 
-const mappedSenators = senators.map(senator => {
-    let middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
-    return {
-        id: senator.id,
-        name: `${senator.first_name}${middleName}${senator.last_name}`,
-        imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-200px.jpeg`
-        seniority: senator.seniority
-    }
-})
+function simplefiedSenattors(senatorArray) {
+    return senatorArray.map(senator => {
+        let middleName = senator.middle_name ? `${senator.middle_name}` :  ` `
+        return {
+            id: senator.id,
+            name: `${senator.first_name}${middleName}${senator.last_name}`,
+            imgURL: `https://www.govtrackus/static/legislator-photos/${senator.gotrack_id}-200px.jpeg`,
+            seniority: parseInt(senator.seniority, 10)
+        }
+    })
+}
 
 function populateContainer(smallSenatorsArray) {
-    console.log(smallSenatorsArray) 
-    smallSenatorsArray.forEach(senator => {
+    return smallSenatorsArray.forEach(senator => {
 
         let senFigure = document.createElement('figure')
         let figImg = document.createElement('img')
@@ -36,5 +37,15 @@ function populateContainer(smallSenatorsArray) {
 }
 
 const republicans = filterSenators('party', 'R')
+const democrats = filterSenators('party', 'D')
+
+const mostSeniority = simplifiedSenators(democrats).reduce(
+    (acc,senator) => {
+        //console.log(senator.seniority)
+        return acc.seniority > senator.seniority ? acc : senator
+    }
+)
+
+console.log(mostSeniority)
 
 populateContainer(mappedSenators)
