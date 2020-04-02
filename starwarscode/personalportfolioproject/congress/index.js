@@ -14,6 +14,7 @@ const mappedSenators = senators.map(senator => {
         id: senator.id,
         name: `${senator.first_name}${middleName}${senator.last_name}`,
         imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-200px.jpeg`
+        seniority: senator.seniority
     }
 })
 
@@ -33,5 +34,7 @@ function populateContainer(smallSenatorsArray) {
         container.appendChild(senFigure)
     })
 }
+
+const republicans = filterSenators('party', 'R')
 
 populateContainer(mappedSenators)
