@@ -1,4 +1,4 @@
-let pokeCOntainer = document.querrySelector('.pokeContainer')
+let pokeCOntainer = document.getElementById('.pokeContainer')
 
 function getPokeData(url) {
     fetch(url).then(function (response) {
@@ -28,7 +28,7 @@ function populatePokeCards(pokeArray) {
         pokeContent.appendChild(pokeFront)
         pokeContent.appendChild(pokeBack)
         pokeCard.appendChild(pokeContent)
-        pokeCOntainer.appendChild(pokeCard)
+        pokeContainer.appendChild(pokeCard)
     })
 }
 
