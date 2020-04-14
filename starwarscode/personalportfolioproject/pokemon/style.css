@@ -8,6 +8,7 @@ header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      background-image: url(../);
       
   }
   
@@ -61,3 +62,13 @@ header {
     font-family: 'Josefin Sans', sans-serif;
     color: blue;
   }
+
+  button {
+    font-size: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: yellow;
+    color: blue;
+    padding: .3em;
+    border-radius: 20px;
+  }
+  
