@@ -1,20 +1,20 @@
 import { senators } from '../data/senators.js'
 
-//this is all about filter, map, reduce
+// this is all about filter, map, reduce
 
-const container = document.getElementById('.container')
+const container = document.querySelector('.container')
 
 const filterSenators = (prop, value) => {
     return senators.filter(senator => senator[prop] === value)
 }
 
-function simplefiedSenattors(senatorArray) {
+function simplifiedSenators(senatorArray) {
     return senatorArray.map(senator => {
-        let middleName = senator.middle_name ? `${senator.middle_name}` :  ` `
+        let middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
         return {
             id: senator.id,
             name: `${senator.first_name}${middleName}${senator.last_name}`,
-            imgURL: `https://www.govtrackus/static/legislator-photos/${senator.gotrack_id}-200px.jpeg`,
+            imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-200px.jpeg`,
             seniority: parseInt(senator.seniority, 10),
             votesWithPartyPct: senator.votes_with_party_pct,
             party: senator.party,
@@ -23,16 +23,27 @@ function simplefiedSenattors(senatorArray) {
     })
 }
 
+let republicansButton = document.getElementById("republicansButton")
+let democratsButton = document.getElementById('democratsButton')
+
+maleButton.addEventListener('click', function(event) {
+    populateDOM(republicans)
+})
+
+femaleButton.addEventListener('click', function(event) {
+    populateDOM(democrats)
+})
+
 function populateContainer(smallSenatorsArray) {
     return smallSenatorsArray.forEach(senator => {
-
+        
         let senFigure = document.createElement('figure')
         let figImg = document.createElement('img')
         let figCaption = document.createElement('figcaption')
 
         figImg.src = senator.imgURL
         figCaption.textContent = senator.name
-        
+
         senFigure.appendChild(figImg)
         senFigure.appendChild(figCaption)
         container.appendChild(senFigure)
@@ -43,7 +54,7 @@ const republicans = filterSenators('party', 'R')
 const democrats = filterSenators('party', 'D')
 
 const mostSeniority = simplifiedSenators(democrats).reduce(
-    (acc,senator) => {
+    (acc, senator) => {
         return acc.seniority > senator.seniority ? acc : senator
     }
 )
@@ -59,9 +70,9 @@ const mostMissedVotes = simplifiedSenators(senators).reduce((acc, senator) => {
     }
 }) */
 
-let loyalArray =[]
+let loyalArray = []
 
-const mostLoyal = simplifiedSenators(senators).reduce((acc, senator) => {
+ const mostLoyal = simplifiedSenators(senators).reduce((acc, senator) => {
     if (senator.votesWithPartyPct === 100) {
         loyalArray.push(senator)
     }
@@ -72,4 +83,4 @@ console.log(mostSeniority)
 console.log(loyalArray)
 console.log(mostMissedVotes)
 
-populateContainer(simplefiedSenators(republicans))
+populateContainer(simplifiedSenators(republicans))
