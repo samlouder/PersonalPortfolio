@@ -22,7 +22,7 @@ header {
   
   .card {
     width: 100%;
-    height: 100%;
+    height: 280px;
     transition: transform 1s;
     transform-style: preserve-3d;
     cursor: pointer;
@@ -37,7 +37,7 @@ header {
   .card__face {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 280px;
     color: white;
     text-align: center;
     font-size: 1.25rem;
@@ -47,10 +47,17 @@ header {
   
   .card__face--front {
     background: red;
+    background-image: ;
   }
   
   .card__face--back {
     background: blue;
     transform: rotateY(180deg);
+    background-image: url("../images/pokemon\ back.png")
   }
-}
+
+  h1 {
+    font-size: 5em;
+    font-family: 'Josefin Sans', sans-serif;
+    color: blue;
+  }
