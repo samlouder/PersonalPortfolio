@@ -44,7 +44,7 @@ function populatePokeCard(singlePokemon) {
             pokeCard.classList.toggle('is-flipped')
         })
         let pokeFront = populateCardFront(singlePokemon)
-        let pokeBack = polulateCardBack(singlePokemon)
+        let pokeBack = populateCardBack(singlePokemon)
 
         pokeCard.appendChild(pokeFront)
         pokeCard.appendChild(pokeBack)
