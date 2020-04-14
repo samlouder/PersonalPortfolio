@@ -9,9 +9,13 @@
     justify-content: flex-end;
     background-color: #BF4F45 ;
     position: fixed;
-     font: 4.5em "Fira Sans", sans-serif;
-   
-}
+    font: 4.5em "Fira Sans", sans-serif;
+    }
+
+    a {
+        color:black;
+        font-size: 1.3em;
+    }
 
 .nav-list{
     display: flex;
