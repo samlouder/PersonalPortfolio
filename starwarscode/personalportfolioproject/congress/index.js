@@ -23,7 +23,7 @@ function simplifiedSenators(senatorArray) {
     })
 }
 
-let republicansButton = document.getElementById("republicansButton")
+/*et republicansButton = document.getElementById("republicansButton")
 let democratsButton = document.getElementById('democratsButton')
 
 maleButton.addEventListener('click', function(event) {
@@ -33,7 +33,7 @@ maleButton.addEventListener('click', function(event) {
 femaleButton.addEventListener('click', function(event) {
     populateDOM(democrats)
 })
-
+*/
 function populateContainer(smallSenatorsArray) {
     return smallSenatorsArray.forEach(senator => {
         
@@ -83,4 +83,4 @@ console.log(mostSeniority)
 console.log(loyalArray)
 console.log(mostMissedVotes)
 
-populateContainer(simplifiedSenators(republicans))
+populateContainer(simplifiedSenators(senators))
