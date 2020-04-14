@@ -2,7 +2,7 @@ import { senators } from '../data/senators.js'
 
 //this is all about filter, map, reduce
 
-const container = document.querrySelector('.container')
+const container = document.getElementById('.container')
 
 const filterSenators = (prop, value) => {
     return senators.filter(senator => senator[prop] === value)

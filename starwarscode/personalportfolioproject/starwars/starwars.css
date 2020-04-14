@@ -19,13 +19,13 @@ button {
     justify-content: center;
 
 }
-.test {
+/*.test {
     /*width: 200px;
     height: 200px;
     margin: 5p;
     /* background-color: lightsalmon; */
-   /* padding: 2px;*/
-}
+   /* padding: 2px;
+}*/
 #gallery {
     display: flex;
     justify-content: space-around;
