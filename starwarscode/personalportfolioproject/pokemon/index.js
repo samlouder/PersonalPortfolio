@@ -76,7 +76,7 @@ function getImageFileName(pokemon) {
 function populateCardBack(pokemon) {
   let cardBack = document.createElement('div')
   cardBack.className = 'card__face card__face--back'
-  cardBack.textContent = pokemon.stats[0].stat.name
+  //cardBack.textContent = pokemon.stats[0].stat.name
   return cardBack
 }
 
@@ -91,10 +91,10 @@ class Pokemon {
 }
 
 function addPokemon() {
-  let newPokemon = new Pokemon(50, 25, 'Thoremon', [
+  let newPokemon = new Pokemon(50, 25, 'Samuleon', [
     {
       stat:
-        { name: 'Thunder Belly' }
+        { name: '' }
     }])
   populatePokeCard(newPokemon)
 }
