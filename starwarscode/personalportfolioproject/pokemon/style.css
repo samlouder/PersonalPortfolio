@@ -8,8 +8,6 @@ header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      background-image: url(../);
-      
   }
   
   .scene {
@@ -22,7 +20,7 @@ header {
   }
   
   .card {
-    width: 100%;
+    width: 210px;
     height: 280px;
     transition: transform 1s;
     transform-style: preserve-3d;
@@ -47,8 +45,7 @@ header {
   }
   
   .card__face--front {
-    background: red;
-    background-image: ;
+    background-image: url("../images/greenbackground.jpg")
   }
   
   .card__face--back {
@@ -71,4 +68,14 @@ header {
     padding: .3em;
     border-radius: 20px;
   }
-  
+  img {
+    height: 200px;
+    width: 200px
+    
+  }
+
+  p {
+    font-size: 1.5em;
+    color:red;
+    font-family: 'Josefin Sans', sans-serif;
+  }
