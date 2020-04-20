@@ -45,13 +45,14 @@ header {
   }
   
   .card__face--front {
-    background-image: url("../images/greenbackground.jpg")
+    /*background-image: url("../images/greenbackground.jpg");*/
+    background-color: gold;
   }
   
   .card__face--back {
-    background: blue;
     transform: rotateY(180deg);
-    background-image: url("../images/pokemon\ back.png")
+    background-image: url("../images/pokemon\ back.png");
+    
   }
 
   h1 {
@@ -76,6 +77,6 @@ header {
 
   p {
     font-size: 1.5em;
-    color: yellow;
+    color: blue;
     font-family: 'Josefin Sans', sans-serif;
   }

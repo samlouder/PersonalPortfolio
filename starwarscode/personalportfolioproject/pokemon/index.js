@@ -91,10 +91,21 @@ class Pokemon {
 }
 
 function addPokemon() {
-  let newPokemon = new Pokemon(50, 25, 'Samuleon', [
+  /*let newPokemon = new Pokemon(50, 25, 'Samuleon', [
     {
       stat:
         { name: '' }
     }])
-  populatePokeCard(newPokemon)
+  populatePokeCard(newPokemon)*/
+  let cardFront = document.createElement('div')
+  cardFront.className = 'card__face card__face--front'
+  
+  let frontImage = document.createElement('img')
+  frontImage.src = `./imagescopy/${getImageFileName(pokemon)}.png`
+  console.log (frontImage.src)
+  let frontLabel = document.createElement('p') 
+  frontLabel.textContent = `${pokemon.name.charAt(0).toUpperCase()}${pokemon.name.slice(1)}`
+  cardFront.appendChild(frontImage)
+  cardFront.appendChild(frontLabel)
+  return cardFront
 }
