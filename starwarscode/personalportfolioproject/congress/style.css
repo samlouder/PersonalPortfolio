@@ -6,21 +6,64 @@
 
 h1 {
     text-align: center;
-    font-weight: 600;
-    font-size: 3em;
-    font-family: 'Raleway', sans-serif;
+    font-size: 5em;
+    font-family: 'Cinzel', serif;
 }
 
 figcaption {
     text-align: center;
     font-size: 1em;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Cinzel', serif;
     color: black;
 }
 
 img {
     justify-content: center;
     box-shadow: 0 0 15px #779;
-    border: solid 3px rgb(157, 113, 62);
+    border: solid 3px whitesmoke;
 }
 
+
+
+body {
+    background-color:lightgray;
+}
+
+header {
+    text-align: center;
+}
+
+.senatorGrid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+figure {
+    margin: .5rem;
+}
+
+figcaption {
+    display: flex;
+    justify-content: space-around;
+}
+
+.fa-democrat {
+    color: blue;
+}
+
+.fa-republican {
+    color: red;
+}
+
+.fa-star {
+    color:green;
+}
+
+.progressDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: .75rem;
+}
