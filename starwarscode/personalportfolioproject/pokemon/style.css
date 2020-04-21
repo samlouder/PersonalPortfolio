@@ -9,7 +9,8 @@ header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      background-image: url("../images/backgroundback.jpeg");
+      background-image: url("../images/bodyGraphic.jpg");
+      background-repeat: repeat-x;
   }
   
   .scene {
@@ -85,4 +86,9 @@ header {
   }
   .root {
     padding: 0;
+  }
+
+  main {
+    background-image: url("../images/bodyGraphic.jpg");
+    background-repeat: repeat-x;
   }
