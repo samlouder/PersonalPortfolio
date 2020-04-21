@@ -33,7 +33,7 @@ header {
   }
   
   .card.is-flipped {
-    transform: rotateY(180deg);
+    transform: rotateY(360deg);
   }
   
   .card__face {
@@ -48,7 +48,7 @@ header {
   }
   
   .card__face--front {
-    background-image: url("../images/background\ front.png");
+    background-image: url("../images/pokemon\ card\ front.jpg");
   }
   
   .card__face--back {
@@ -58,14 +58,14 @@ header {
   }
 
   h1 {
-    font-size: 5em;
-    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4em;
+    font-family: 'Press Start 2P', cursive;
     color: blue;
   }
 
   button {
     font-size: 2em;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Press Start 2P', cursive;
     background-color: yellow;
     color: blue;
     padding: .3em;
@@ -81,7 +81,7 @@ header {
 
   p {
     font-size: 1.5em;
-    color: blue;
+    color: yellow;
     font-family: 'Josefin Sans', sans-serif;
   }
   .root {
