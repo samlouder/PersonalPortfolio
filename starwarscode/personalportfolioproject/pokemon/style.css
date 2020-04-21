@@ -9,7 +9,7 @@ header {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      background-image: url("../images/div\ background.jpg");
+      background-image: url("../images/backgroundback.jpeg");
   }
   
   .scene {
@@ -84,5 +84,5 @@ header {
     font-family: 'Josefin Sans', sans-serif;
   }
   .root {
-    background-color: black;
+    padding: 0;
   }
