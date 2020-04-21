@@ -92,3 +92,6 @@ header {
     background-image: url("../images/bodyGraphic.jpg");
     background-repeat: repeat-x;
   }
+  html {
+    background-color: black;
+  }

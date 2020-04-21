@@ -51,7 +51,8 @@ function populateShipView(shipData) {
   shipImage.addEventListener('error', event => {
     shipImage.hidden = true
     modalDialog.classList.toggle("is-active")
-    modalMessage.textContent = `Sorry, could not find an image.`
+    /*modalMessage.textContent = `Sorry, could not find an image.`*/
+    if (shipImage) {modalMessage.textContent = `Sorry, could not find an image.`}
   })
 
   shipView.appendChild(shipImage)
