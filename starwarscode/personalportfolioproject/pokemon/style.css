@@ -48,12 +48,12 @@ header {
   }
   
   .card__face--front {
-    background-image: url("../images/pokemon\ card\ front.jpg");
+    background-image: url("./images/pokemon\ card\ front.jpg");
   }
   
   .card__face--back {
     transform: rotateY(180deg);
-    background-image: url("../images/pokemon\ back.png");
+    background-image: url("./images/pokemon\ back.png");
     
   }
 
@@ -91,5 +91,5 @@ header {
   }
 
   html {
-    background-image: url("/images/main\ background.jpg");
+    background-image: url("./images/main\ background.jpg");
   }
