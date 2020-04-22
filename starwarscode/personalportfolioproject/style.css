@@ -73,8 +73,8 @@ i {
 #contact {
     display: flex;
     justify-content: center;
-    padding: 1.5rem;
-    margin: 1.5rem;
+    padding: 0;
+    margin: 0;
     width: 100%;
     flex-wrap: wrap;
     background-color: lightgray;
@@ -100,15 +100,19 @@ footer {
 
 figcaption {
     text-align: center;
-    font: 1.5em "helvetica", sans-serif;
+    font: 1em "helvetica", sans-serif;
+    text-decoration: none;
 }
 
 #projects {
     background-color: lightgray;
 }
 
-figure {
-
+img {
+    box-shadow: 0 0 20px black;
+    border: solid 3px lightgray;
+    height: 220px;
+    margin: .5em;
 }
 
 /* 1200px / 16px = 75em */

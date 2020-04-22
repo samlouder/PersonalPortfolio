@@ -6,6 +6,8 @@ a > img {
     height: 20rem;
     margin: 2px;
     padding: 20px;
+    box-shadow: 0 0 20px black;
+    border: solid 3px lightgray;
 }
 
 button {
@@ -51,4 +53,7 @@ p {
     color: yellow;
     font-size: 1.5em;
     font-family: 'Raleway', sans-serif;
+}
+div {
+    justify-content: center;
 }
