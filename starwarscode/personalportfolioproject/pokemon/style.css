@@ -33,7 +33,7 @@ header {
   }
   
   .card.is-flipped {
-    transform: rotateY(360deg);
+    transform: rotateY(540deg);
   }
   
   .card__face {
@@ -77,6 +77,8 @@ header {
     margin-top: 2.5em;
     margin-bottom: 0;
     box-shadow: 0 0 15px #779;
+    border: solid 4px yellow;
+    border-radius: 10%;
   }
 
   p {
@@ -88,10 +90,6 @@ header {
     padding: 0;
   }
 
-  main {
-    background-image: url("../images/bodyGraphic.jpg");
-    background-repeat: repeat-x;
-  }
   html {
-    background-color: black;
+    background-image: url("/images/main\ background.jpg");
   }

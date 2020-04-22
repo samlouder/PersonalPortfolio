@@ -97,7 +97,7 @@ function addPokemon() {
         { name: '' }
     }])
   populatePokeCard(newPokemon)*/
-  let cardFront = document.createElement('div')
+  let newPokemon = document.createElement('div')
   cardFront.className = 'card__face card__face--front'
   
   let frontImage = document.createElement('img')
