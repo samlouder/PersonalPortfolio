@@ -96,7 +96,5 @@ const mostLoyal = getSimplifiedSenators(republicans).reduce((acc, senator) => {
     return acc.loyaltyPct > senator.loyaltyPct ? acc : senator
 })
 
-//console.log(loyalArray)
-
 populateSenatorDiv(getSimplifiedSenators(senators))
 console.log(mostSeniority.seniority)
