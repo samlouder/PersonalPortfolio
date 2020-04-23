@@ -21,7 +21,7 @@ async function getAPIData(url) {
 }
 
 function loadPage() {
-  getAPIData('https://pokeapi.co/api/v2/pokemon/?&limit=25').then(
+  getAPIData('https://pokeapi.co/api/v2/pokemon/?&limit=50').then(
     (data) => {
       for (const pokemon of data.results) {
         getAPIData(pokemon.url).then(
